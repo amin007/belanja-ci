@@ -151,5 +151,20 @@ class Caripdf_model extends CI_Model
 		return $ujian;
 	}
 #---------------------------------------------------------------------------------------------------
+	function panggilData()
+	{
+		$this->load->database();
+		$query = $this->db->query('SELECT * FROM senarai_belanja');
+		//$ujian = $this->db->result('SELECT * FROM senarai_belanja');
+		$this->semakPembolehubah($query->result(),'hasil',0);
+		/*foreach ($query->result() as $row)
+		{
+			echo '<br>' . $row->tarikh;
+			//echo $row->name;
+			//echo $row->email;
+		}//*/
+		echo '<br>Total Results: ' . $query->num_rows();
+	}
+#---------------------------------------------------------------------------------------------------
 #===================================================================================================
 }
