@@ -154,16 +154,17 @@ class Caripdf_model extends CI_Model
 	function panggilData()
 	{
 		$this->load->database();
-		$query = $this->db->query('SELECT * FROM senarai_belanja');
-		//$ujian = $this->db->result('SELECT * FROM senarai_belanja');
-		$this->semakPembolehubah($query->result(),'hasil',0);
-		/*foreach ($query->result() as $row)
-		{
-			echo '<br>' . $row->tarikh;
-			//echo $row->name;
-			//echo $row->email;
-		}//*/
-		echo '<br>Total Results: ' . $query->num_rows();
+		$jadual = 'senarai_belanja';
+		$query = $this->db->query('SELECT * FROM ' . $jadual);
+		//$this->semakPembolehubah($query->result_array(),'hasil',0);
+		foreach ($query->result_array() as $key => $row):
+		foreach ($row as $medan => $data):
+			$hasil[$jadual][$key][$medan] = $data;
+			//echo '<br>' . $medan;
+		endforeach;endforeach;//*/
+		//$this->semakPembolehubah($hasil,'hasil',0);
+		//echo '<br>Jumlah: ' . $query->num_rows();
+		return $hasil;
 	}
 #---------------------------------------------------------------------------------------------------
 #===================================================================================================
