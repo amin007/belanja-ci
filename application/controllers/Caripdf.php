@@ -36,11 +36,11 @@ class Caripdf extends CI_Controller
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		$this->load->model('Caripdf_model','Pdf');
 		$this->senarai = $this->Pdf->data();
-		//$this->semakPembolehubah($senarai,'senarai',0);		
-		//$this->load->view('welcome_message');
-		$this->load->library('Pdf');
-		$this->load->view('caripdf/contoh000');
+		//$this->semakPembolehubah($senarai,'senarai',0);
 		//$this->load->view('caripdf/a4');
+		# Pergi papar kandungan
+		$this->load->library('Pdf');
+		$this->load->view('caripdf/contoh003');
 	}
 #---------------------------------------------------------------------------------------------------
 #===================================================================================================
