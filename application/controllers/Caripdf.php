@@ -50,7 +50,7 @@ class Caripdf extends CI_Controller
 		$this->senarai = $this->Pdf->panggilData();
 		//$this->semakPembolehubah($senarai,'senarai',0);
 		//$this->load->view('caripdf/a4');
-		/*# Pergi papar kandungan
+		# Pergi papar kandungan
 		$this->load->library('Pdf');
 		$this->load->view('caripdf/contoh003');//*/
 	}
