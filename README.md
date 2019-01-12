@@ -11,6 +11,6 @@ ___
 http://www.php-fig.org/psr/psr-4/
 
 # Sumber ilham dari
-http://jream.com/lab
-https://github.com/amin007/mvc-melayu
-https://github.com/bcit-ci/CodeIgniter/wiki/TCPDF-Integration
+* http://jream.com/lab
+* https://github.com/amin007/mvc-melayu
+* https://github.com/bcit-ci/CodeIgniter/wiki/TCPDF-Integration
